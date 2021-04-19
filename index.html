@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+            <h1 id="title">
+                Checklist
+            </h1>
+        </header>
+        <form id="checklist-form">
+            <p>SCALE</p>
+            <div class="form-group">
+                <p id="storeLocation-title" class="paragraph-titles">Location</p>
+                <!--<label for="storeNumList" id="store-label">Store:</label asdfasdfafsd>-->
+                <input list="datalist" id="storeNumList" name="storeNumList" placeholder="Type store number">
+                <datalist id="datalist" class="form-control">
+                    <option value="Store#01"></option>
+                    <option value="Store#02"></option>
+                    <option value="Store#03"></option>
+                    <option value="Store#04"></option>
+                    <option value="Store#05"></option>
+                    <option value="Store#06"></option>
+                    <option value="Store#07"></option>
+                    <option value="Store#08"></option>
+                    <option value="Store#09"></option>
+                    <option value="Store#10"></option>
+                    <option value="Store#11"></option>
+                    <option value="Store#12"></option>
+                    <option value="Store#13"></option>
+                    <option value="Store#14"></option>
+                    <option value="Store#15"></option>
+                    <option value="Store#16"></option>
+                    <option value="Store#17"></option>
+                </datalist>
+            </div>
+            <div class="form-group">
+                <p id="radio-title-selection" class="paragraph-titles">Lane or Scale?</p>
+                <div class="radio-selections">
+                    <input type="radio" id="lane" name="device" value="lane">
+                    <label for="lane">Lane</label>
+                    <input list="datalist2" id="laneNumList" name="laneNumList" placeholder="lane #">
+                    <datalist id="datalist2" class="form-control">
+                        <option value="#02"></option>
+                        <option value="#01"></option>
+                        <option value="#03"></option>
+                        <option value="#04"></option>
+                        <option value="#05"></option>
+                        <option value="#06"></option>
+                        <option value="#07"></option>
+                        <option value="#08"></option>
+                        <option value="#09"></option>
+                        <option value="#10"></option>
+                        <option value="#11"></option>
+                        <option value="#12"></option>
+                        <option value="#13"></option>
+                        <option value="#14"></option>
+                        <option value="#15"></option>
+                        <option value="#16"></option>
+                        <option value="#17"></option>
+                        <option value="#18"></option>
+                        <option value="#19"></option>
+                        <option value="#20"></option>
+                        <option value="#21"></option>
+                        <option value="#22"></option>
+                        <option value="#23"></option>
+                        <option value="#24"></option>
+                        <option value="#25"></option>
+                    </datalist>
+                </div>
+                <div class="radio-selections">
+                    <input type="radio" id="scale" name="device" value="scale">
+                    <label for="scale">Scale</label>
+                    <input list="datalist3" id="scaleNumList" name="scaleNumList" placeholder="Scale #">
+                    <datalist id="datalist3" class="form-control">
+                        <option value="800"></option>
+                        <option value="801"></option>
+                        <option value="802"></option>
+                        <option value="803"></option>
+                        <option value="804"></option>
+                        <option value="805"></option>
+                        <option value="806"></option>
+                        <option value="807"></option>
+                        <option value="808"></option>
+                        <option value="809"></option>
+                        <option value="810"></option>
+                        <option value="811"></option>
+                        <option value="812"></option>
+                        <option value="813"></option>
+                        <option value="814"></option>
+                        <option value="815"></option>
+                        <option value="816"></option>
+                        <option value="817"></option>
+                        <option value="818"></option>
+                        <option value="819"></option>
+                        <option value="820"></option>
+                        <option value="821"></option>
+                        <option value="822"></option>
+                        <option value="823"></option>
+                        <option value="824"></option>
+                        <option value="825"></option>
+                        <option value="826"></option>
+                    </datalist>
+                </div>
+            </div>
+            <div class="form-group">
+                <p id="files-title" class="paragraph-titles">How many files to process?</p>
+                <input type="number" id="files" name="files" min="0" max="1000" placeholder="Type file #">
+                <label for="files">+Files</label>
+            </div>
+            <div class="form-group">
+                <p id="radio-title-ping" class="paragraph-titles">Pings?</p>
+                <div class="radio-selections">
+                    <input type="radio" id="ping-yes" name="ping" value="ping-yes">
+                    <label for="ping-yes">Yes ping</label>
+                </div>
+                <div class="radio-selections">
+                    <input type="radio" id="ping-no" name="ping" value="ping-no">
+                    <label for="ping-no">No ping</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <p id="department-title" class="paragraph-titles">Department Name?</p>
+                <!--<label for="deptlocation" id="dept-label">Department:</label> -->
+                <input list="department" id="deptlocation" name="deptlocation" placeholder="Name of department">
+                <datalist id="department" class="form-control">
+                    <option value="front-end"></option>
+                    <option value="deli"></option>
+                    <option value="meat"></option>
+                    <option value="seafood"></option>
+                    <option value="hotfoods"></option>
+                    <option value="bakery"></option>
+                    <option value="produce"></option>
+                    <option value="juicebar"></option>
+                    <option value="sushi"></option>
+                </datalist>
+
+            </div>
+            <div class="form-group">
+                <p id="comment-title" class="paragraph-titles">Comments:</p>
+                <textarea name="text-comments" id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
+
+            </div>
+            <div class="form-group">
+                <button id="main_btn" type="button">Submit</button>
+                <button>Clear</button>
+            </div>
+        </form>
+        <section id="section1">
+            <table class="tabledata">
+                <thead>
+                    <tr id="tr1">
+                        <th>Location</th>
+                        <th>Lane/Scale</th>
+                        <th>#</th>
+                        <th>Files</th>
+                        <th>Ping</th>
+                        <th>Dept. Name</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </section>
+
+
+    </div>
+
+</body>
+<script src="main.js"></script>
+
+</html>

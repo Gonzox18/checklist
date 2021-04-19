@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #91c788;
+}
+
+#container {
+    display: grid;
+    grid-template-areas: "header header header header" 
+                         "checklist-form section section section" 
+                         "checklist-form section section section"
+                         "checklist-form section section section";
+    grid-gap: 30px;
+    grid-auto-rows: 65px 2fr;
+}
+
+#header {
+    background-color: #F5F5F5;
+    grid-area: header;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    text-align: center;
+}
+
+#checklist-form {
+    grid-area: checklist-form; 
+    background-color: #F5F5F5;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    text-align: left;
+    padding: 10px;
+    height: 65px;
+}
+
+.form-group {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-2em);
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+#checklist-form:focus .form-group,
+#checklist-form:focus-within .form-group,
+#checklist-form:hover .form-group {
+    visibility: visible; /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+
+.form-group {
+    background-color: #F5F5F5;
+    display: grid;
+    grid-area: checklist-form;
+    
+}
+
+.paragraph-titles {
+    text-align: left;
+    font-weight: bold;
+}
+
+#section1 {
+    
+    background-color: #F5F5F5;
+    grid-area: section;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    
+
+}
+
+.tabledata {
+    display: grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    grid-template-columns: 
+    minmax(150px, 1fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr)
+}
+
+thead, tbody, tr {
+    display: contents;
+}
+
+
+th, td {
+    border: 1px solid #ccc;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: #ccc;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.1rem;
+    border-right: 1px solid gray;
+
+}
+
+tr:nth-child(even){
+    background: #efefef;
+}
+
+tr:hover {
+    background: #d1d1d1;
+}
+
+
+
+
